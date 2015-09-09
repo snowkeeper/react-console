@@ -1,0 +1,48 @@
+.console {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 340px;
+    background: transparent;
+    color: #fffcef;
+    overflow: hidden;
+    opacity: .95
+}
+.console.fullscreen {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+.console.fullscreen .msg {
+    height: 100%
+}
+.console pre {
+    color: #f6f6f9;
+    background-color: #363653;
+    border-color: #3a3a5a;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+.console .msg {
+    overflow: scroll;
+    height: 300px;
+    margin-top: 40px;
+    background: #2c2c44
+}
+.console.close {
+    bottom: -300px
+}
+.console input {
+    background: #2c2c44;
+    color: #fffcef;
+    border: none
+}
+.console .bg-danger {
+    color: #84302a;
+    padding: 10px
+}

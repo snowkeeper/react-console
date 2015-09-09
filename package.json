@@ -1,0 +1,31 @@
+{
+  "name": "react-console",
+  "version": "0.0.1",
+  "description": "in app console",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "react",
+    "console"
+  ],
+  "author": "snowkeeper",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "debug": "^2.2.0",
+    "gulp": "^3.9.0",
+    "lodash": "^3.10.1",
+    "react": "^0.13.3",
+    "react-draggable": "^0.8.1",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "lodash": "^3.10.1",
+    "react": "^0.13.3",
+    "react-draggable": "^0.8.1"
+  }
+}
