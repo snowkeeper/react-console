@@ -23,25 +23,19 @@ openConsole() {
 },
 logger(data) {
 	var log = {
-		alive: this.state.log
+		alive: this.state.log,
+		message: data.message,
+		doc: data.doc,
+		error: data.error,
 	};
-	
-	// make sure to erase/overwrite any current entries
-	log.message = data.message || ''; // String or Array of Strings 
-	log.doc = data.doc || ''; // Object or Array of Objects
-	log.error = data.error || ''; // String or Array of Strings
 	
 	this.setState({log : log});
 },
 debugLogger(msg) {
 	var log = {
-		alive: this.state.log
+		alive: this.state.log,
+		message: msg
 	};
-	
-	// make sure to erase/overwrite any current entries
-	log.message = msg; 
-	log.doc = ''; 
-	log.error = '';
 	
 	this.setState({log : log});
 }
