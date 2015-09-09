@@ -52,8 +52,9 @@ debugLogger(msg) {
 // global
 var debug = require('debug');
 
+... React Class ...
 setInitialState() {
-	debug.log = this.logger;
+	debug.log = this.debugLogger;
 	...
 }
 
@@ -61,6 +62,7 @@ setInitialState() {
 var debug = require('debug');
 var bugger = debug('react-console');
 
+... React Class ...
 setInitialState() {
 	bugger.log = this.debugLogger;
 	...
