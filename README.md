@@ -22,7 +22,9 @@ openConsole() {
 	this.setState({ log: {alive: true} });
 },
 logger(data) {
-	var log = this.state.log;
+	var log = {
+		alive: this.state.log
+	};
 	
 	// make sure to erase/overwrite any current entries
 	log.message = data.message || ''; // String or Array of Strings 
@@ -32,7 +34,9 @@ logger(data) {
 	this.setState({log : log});
 },
 debugLogger(msg) {
-	var log = this.state.log;
+	var log = {
+		alive: this.state.log
+	};
 	
 	// make sure to erase/overwrite any current entries
 	log.message = msg; 
