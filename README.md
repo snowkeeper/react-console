@@ -5,6 +5,8 @@ Add a simple console pane to any app
 ```javascript
 var Console = require('react-console');
 
+... React Class ...
+
 render() {
 	return (
 		<Console command={_this.command} toggle={this.toggleConsole} alive={this.state.log.alive} log={this.state.log}  />  
@@ -26,6 +28,8 @@ logger(data) {
 	log.error = '';
 	this.setState({log : log});
 }
+
+... end React Class ...
 
 ```  
 
