@@ -9,7 +9,7 @@ var Console = require('react-console');
 
 render() {
 	return (
-		<Console command={_this.command} toggle={this.toggleConsole} alive={this.state.log.alive} log={this.state.log}  />  
+		<Console command={this.command} toggle={this.toggleConsole} alive={this.state.log.alive} log={this.state.log}  />  
 	);
 },
 command(value) {
