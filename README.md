@@ -23,9 +23,22 @@ openConsole() {
 },
 logger(data) {
 	var log = this.state.log;
-	log.message = '';
-	log.doc = '';
+	
+	// make sure to erase/overwrite any current entries
+	log.message = data.message || ''; // String or Array of Strings 
+	log.doc = data.doc || ''; // Object or Array of Objects
+	log.error = data.error || ''; // String or Array of Strings
+	
+	this.setState({log : log});
+},
+debugLogger(msg) {
+	var log = this.state.log;
+	
+	// make sure to erase/overwrite any current entries
+	log.message = msg; 
+	log.doc = ''; 
 	log.error = '';
+	
 	this.setState({log : log});
 }
 
@@ -49,7 +62,7 @@ var debug = require('debug');
 var bugger = debug('react-console');
 
 setInitialState() {
-	bugger.log = this.logger;
+	bugger.log = this.debugLogger;
 	...
 }
 ```
