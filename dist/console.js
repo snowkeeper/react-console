@@ -7,7 +7,7 @@ var	debug = require('debug')('react-console');
 
 var Console = React.createClass({displayName: "Console",
 	getInitialState() {
-		var props = this.props;
+		var props = this.props.log;
 		var msg = _.isArray(props.messages) ? props.messages : props.messages ? [props.messages] : [];
 		var doc = _.isArray(props.docs) ? props.docs : props.docs ? [props.docs] : [];
 		var err = _.isArray(props.error) ? props.error : props.error ? [props.error] : [];
@@ -30,8 +30,9 @@ var Console = React.createClass({displayName: "Console",
 			_this.setState({alive: props.alive});
 		}
 		
+		var logs = props.log;
 		// standard message
-		var msg = _.isArray(props.messages) ? props.messages : props.messages ? [props.messages] : []
+		var msg = _.isArray(logs.message) ? logs.message : logs.message ? [logs.message] : []
 		_.each(msg, function(m) {
 			var push = _this.state.log;
 			if(m && m !== _this._cache) {
@@ -53,7 +54,7 @@ var Console = React.createClass({displayName: "Console",
 		});
 		
 		// object
-		var docs = _.isArray(props.docs) ? props.docs : props.docs ? [props.docs] : []
+		var docs = _.isArray(logs.doc) ? logs.doc : logs.doc ? [logs.doc] : []
 		_.each(docs, function(m) {
 			var push = _this.state.log;
 			try {
@@ -80,7 +81,7 @@ var Console = React.createClass({displayName: "Console",
 		});
 		
 		// error
-		var error = _.isArray(props.error) ? props.error : props.error ? [props.error] : []
+		var error = _.isArray(logs.error) ? logs.error : logs.error ? [logs.error] : []
 		_.each(error, function(m) {
 			var push = _this.state.log;
 			if(m && m !== _this._cache) {
