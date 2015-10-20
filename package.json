@@ -19,21 +19,20 @@
   "author": "snowkeeper",
   "license": "MIT",
   "dependencies": {
+    "babel": "^5.8.23",
+    "browserify": "^11.0.1",
+    "babelify": "^6.3.0",
     "debug": "^2.2.0",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-draggable": "^0.8.1"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
-    "babelify": "^6.3.0",
-    "browserify": "^11.0.1",
     "gulp": "^3.9.0",
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"
   },
   "jspm": {
-    "format": "es6",
     "registry" : "npm"
   }
 }
