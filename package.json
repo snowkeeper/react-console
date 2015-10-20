@@ -38,6 +38,6 @@
     "directories": {
       "lib": "lib"
     },
-    "main": "lib/console.js",
+    "main": "lib/console.js"
   }
 }
