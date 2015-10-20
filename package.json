@@ -34,10 +34,6 @@
   },
   "jspm": {
     "format": "es6",
-    "registry" : "npm",
-    "directories": {
-      "lib": "lib"
-    },
-    "main": "lib/console.js"
+    "registry" : "npm"
   }
 }
