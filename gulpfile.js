@@ -4,7 +4,6 @@ var reactify = require('reactify');
 var source = require('vinyl-source-stream');
 var babel = require('babelify');
 
-
 /**
  * Build Tasks
  */
