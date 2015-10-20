@@ -32,5 +32,12 @@
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"
   },
-  "registry" : "npm"
+  "jspm": {
+    "format": "es6",
+    "registry" : "npm",
+    "directories": {
+      "lib": "lib"
+    },
+    "main": "lib/console.js",
+  }
 }
